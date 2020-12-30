@@ -129,7 +129,8 @@ Damit wird Dein Programm zum @boardname@ übertragen.
 ## Schritt 9
 
 Gut gemacht! Du hast eine elektronische Wasserwaage für den @boardname@ programmiert.
-Verlasse diese Anleitung, indem Du auf ``|Fertigstellen|`` klickst. 
+Verlasse diese Anleitung, indem Du im nächsten Schritt auf ``|Fertigstellen|`` klickst. 
+Zuvor erhältst Du noch einen Hinweis, wie Du Dein Programm mit anderen teilen kannst.
 
 
 ## ~ @unplugged
