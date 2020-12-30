@@ -15,7 +15,7 @@ Die Empfindlichkeit der Wasserwaage soll einstellbar sein.
 ## Schritt 1 @fullscreen
 
 Erstelle eine Variable ``||Variables:MaximalerWinkel||`` und setze diese auf den Wert 10. Damit wird die Empfindlichkeit der Anzeige gesteuert.
-Jee kleiner der Wert ist, desto empfindlicher reagiert die Wasserwaage.
+Je kleiner der Wert ist, desto empfindlicher reagiert die Wasserwaage.
 Setze dies in den Block  ``||Basic:beim Start||``.
 
 ```blocks
@@ -44,7 +44,7 @@ basic.forever(() => {
 Begrenze die Werte für ``||Variables:LageX||`` und ``||Variables:LageY||`` auf ``||Variables:MaximalerWinkel||``, 
 und zwar so, daß das für negative und positive Werte gleichermaßen passiert. Dafür kannst Du den Block ``||Math:begrenze zwischen und||``
 aus dem ``||Math:Mathematik||`` Block benutzen. Für den unteren Wert musst Du ``||Variables:MaximalerWinkel||`` mit -1 multiplizieren, 
-damit Du eine -10 erhältst. 
+damit Du eine -10 erhältst. Mit dieser Begrenzung wird der indirekt der Messbereich der Wasserwaage gesteuert.
 **Beachte hier, daß wir die neu errechneten Werte wieder in die gleichen Variablen ``||Variables:LageX||`` und ``||Variables:LageY||`` speichern. Wir können das tun, weil wir die alten Inhalte von ``||Variables:LageX||`` und ``||Variables:LageY||`` nicht mehr brauchen.**
 
 ```blocks
@@ -62,7 +62,6 @@ basic.forever(() => {
 Erstelle eine Variable ``||Variables:PunktX||`` und eine Variable ``||Variables:PunktY||``, 
 in die die berechneten Koordinaten für den Punkt auf der 5x5 LED Matrix des @boardname@ gespeichert werden.
 Setze sie auf 0.
-
 **Beachte hier, daß wir die errechneten Werte für die Anzeige in neue Variablen ``||Variables:PunktX||`` und ``||Variables:PunktY||`` speichern. Wir machen das, weil wir die Inhalte von ``||Variables:LageX||`` und ``||Variables:LageY||`` evtl. noch für die Fehlersuche brauchen.**
 
 
@@ -76,7 +75,7 @@ let PunktY = 0
 
 Berechne ``||Variables:PunktX||`` und ``||Variables:PunktY||``, indem Du mit dem Block ``||Math:verteile .. von niedrig von hoch .. zu niedrig zu hoch||``
 aus dem ``||Math:Mathematik||`` Block die Lage - Koordinate, die sich zwischen -``||Variables:MaximalerWinkel||`` und ``||Variables:MaximalerWinkel||`` 
-bewegt, auf eine mögliche Koordinate der 5x5 - Matrix des @boardname@ zuweist. Programmiere diesen Schritt für ``||Variables:PunktX||`` und ``||Variables:PunktY||``. 
+bewegt, auf eine mögliche Koordinate der 5x5 - Matrix zwischen 0 und 4 des @boardname@ zuweist. Programmiere diesen Schritt für ``||Variables:PunktX||`` und ``||Variables:PunktY||``. 
 Denke daran, daß sich die Luftblase auf einer Wasserwaage immer entgegengesetzt zur Neigung bewegt.
 
 
